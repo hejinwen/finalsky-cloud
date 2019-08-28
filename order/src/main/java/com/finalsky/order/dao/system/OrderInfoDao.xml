@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.finalsky.order.dao.system.OrderInfoDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.finalsky.order.entity.system.OrderInfo">
+        <id column="id" property="id" />
+        <result column="user_id" property="userId" />
+        <result column="order_number" property="orderNumber" />
+        <result column="order_amount" property="orderAmount" />
+        <result column="order_date" property="orderDate" />
+        <result column="order_status" property="orderStatus" />
+        <result column="receive_name" property="receiveName" />
+        <result column="receive_address" property="receiveAddress" />
+        <result column="receive_phone" property="receivePhone" />
+        <result column="remark" property="remark" />
+        <result column="status" property="status" />
+        <result column="create_time" property="createTime" />
+        <result column="modify_time" property="modifyTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="BaseColumnList">
+        t.id, t.user_id, t.order_number, t.order_amount, t.order_date, t.order_status, t.receive_name, t.receive_address, t.receive_phone, t.remark, t.status, t.create_time, t.modify_time
+    </sql>
+
+    <select id="queryForList" resultMap="BaseResultMap" parameterType="map">
+        SELECT
+        <include refid="BaseColumnList"/>
+        FROM sys_order_info t
+        <where>
+            <if test="id != null and id != ''">
+                AND t.id = #{id}
+            </if>
+            <if test="ids != null and ids.size() > 0">
+                AND t.id IN
+                <foreach item="item" index="index" collection="ids" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+            <if test="status != null">
+                AND t.status = #{status}
+            </if>
+            <if test="statusIds != null and statusIds.size > 0">
+                AND t.status IN
+                <foreach item="item" index="index" collection="statusIds" open="(" separator="," close=")">#{item}</foreach>
+            </if>
+        </where>
+    </select>
+</mapper>

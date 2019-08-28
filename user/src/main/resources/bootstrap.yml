@@ -1,0 +1,16 @@
+logging:
+  config: classpath:logback-spring.xml
+  path: /var/log/springCloudAPP/user
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: user-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.126.172:8848
+      config:
+        file-extension: yaml
+        server-addr: 192.168.126.172:8848
