@@ -1,4 +1,4 @@
-package com.finalsky.user;
+package com.finalsky;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

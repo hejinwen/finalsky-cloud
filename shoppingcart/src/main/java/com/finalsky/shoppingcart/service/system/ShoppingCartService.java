@@ -1,8 +1,8 @@
 package com.finalsky.shoppingcart.service.system;
 
 import com.finalsky.shoppingcart.entity.system.ShoppingCart;
+import com.finalsky.shoppingcart.model.ShoppingCartVO;
 import info.joyc.core.service.BaseService;
-
 import java.util.List;
 import java.util.Map;
 
@@ -27,5 +27,5 @@ public interface ShoppingCartService extends BaseService<ShoppingCart> {
      * @param parameterMap Map条件集合
      * @return ShoppingCart对象列表
      */
-    List<ShoppingCart> getShoppingCartList(Map<String, Object> parameterMap);
+    List<ShoppingCartVO> getShoppingCartList(Map<String, Object> parameterMap);
 }

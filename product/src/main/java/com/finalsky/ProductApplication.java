@@ -1,11 +1,11 @@
-package com.finalsky.shoppingcart;
+package com.finalsky;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import tk.mybatis.spring.annotation.MapperScan;
 
 /**
- * com.finalsky.shoppingcart.ShoppingCartApplication.java
+ * com.finalsky.product.ProductApplication.java
  * ==============================================
  * Copy right 2015-2019 by http://www.rejoysoft.com
  * ----------------------------------------------
@@ -14,13 +14,13 @@ import tk.mybatis.spring.annotation.MapperScan;
  *
  * @author : hejw
  * @version : v1.0.0
- * @desc : 购物车服务
- * @since : 2019-08-21 21:13
+ * @desc : 产品服务
+ * @since : 2019-08-21 19:42
  */
 @SpringBootApplication
-@MapperScan(basePackages = "com.finalsky.shoppingcart.dao")
-public class ShoppingCartApplication {
+@MapperScan(basePackages = "com.finalsky.product.dao")
+public class ProductApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ShoppingCartApplication.class, args);
+        SpringApplication.run(ProductApplication.class, args);
     }
 }

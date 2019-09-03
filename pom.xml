@@ -24,6 +24,8 @@
         <module>shoppingcart</module>
         <module>order</module>
         <module>codeGenerator</module>
+        <module>provider-api</module>
+        <module>rpcserver</module>
     </modules>
 
     <properties>

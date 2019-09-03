@@ -1,5 +1,6 @@
 package com.finalsky.shoppingcart.web.system;
 
+import com.finalsky.shoppingcart.model.ShoppingCartVO;
 import com.github.pagehelper.PageInfo;
 import com.finalsky.shoppingcart.entity.system.ShoppingCart;
 import com.finalsky.shoppingcart.service.system.ShoppingCartService;
@@ -48,9 +49,9 @@ public class ShoppingCartController {
             @ApiImplicitParam(paramType = "query", name = "pageSize", value = "每页显示数据行数", required = false, dataType = "int")
     })
     @GetMapping(value = "")
-    public ResponseEntity<PageInfo<ShoppingCart>> getShoppingCartList(@RequestParam(required = false) String statusIds,
-                                                                @RequestParam(required = false, defaultValue = "0") Integer pageNum,
-                                                                @RequestParam(required = false, defaultValue = "0") Integer pageSize) {
+    public ResponseEntity<PageInfo<ShoppingCartVO>> getShoppingCartList(@RequestParam(required = false) String statusIds,
+                                                                        @RequestParam(required = false, defaultValue = "0") Integer pageNum,
+                                                                        @RequestParam(required = false, defaultValue = "0") Integer pageSize) {
         Map<String, Object> parameterMap = new HashMap<>();
         if (StringUtil.isNotBlank(statusIds)) {
             parameterMap.put("statusIds", Arrays.asList(statusIds.split(",")));
