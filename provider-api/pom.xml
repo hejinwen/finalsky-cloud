@@ -17,7 +17,12 @@
 
     <modules>
         <module>user-api</module>
+        <module>product-api</module>
     </modules>
+
+    <properties>
+        <pagehelper.version>5.1.10</pagehelper.version>
+    </properties>
 
     <dependencies>
         <dependency>

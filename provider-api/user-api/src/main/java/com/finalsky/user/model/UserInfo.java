@@ -1,4 +1,4 @@
-package com.finalsky.user.entity.system;
+package com.finalsky.user.model;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
@@ -8,7 +8,7 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
 
 /**
- * com.finalsky.user.entity.system.UserInfo.java
+ * com.finalsky.user.model.UserInfo.java
  * ==============================================
  * Copy right 2015-2019 by http://www.rejoysoft.com
  * ----------------------------------------------

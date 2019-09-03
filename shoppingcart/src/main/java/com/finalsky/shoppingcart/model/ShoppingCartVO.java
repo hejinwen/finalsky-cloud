@@ -51,6 +51,12 @@ public class ShoppingCartVO implements Serializable {
     private String productId;
 
     /**
+     * 商品名称
+     */
+    @ApiModelProperty(value = "商品名称")
+    private String productName;
+
+    /**
      * 商品数量
      */
     @ApiModelProperty(value = "商品数量")

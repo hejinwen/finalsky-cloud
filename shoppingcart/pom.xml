@@ -82,7 +82,7 @@
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
-            <version>${pagehelper.version}</version>
+            <version>${pagehelper-boot.version}</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
@@ -101,6 +101,11 @@
         <dependency>
             <groupId>com.finalsky.provider.api</groupId>
             <artifactId>user-api</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.finalsky.provider.api</groupId>
+            <artifactId>product-api</artifactId>
             <version>1.0</version>
         </dependency>
     </dependencies>

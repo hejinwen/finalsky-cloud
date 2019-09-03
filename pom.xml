@@ -35,7 +35,7 @@
         <springfox-swagger.version>2.9.2</springfox-swagger.version>
         <swagger.version>1.5.22</swagger.version>
         <mybatis.version>2.1.5</mybatis.version>
-        <pagehelper.version>1.2.12</pagehelper.version>
+        <pagehelper-boot.version>1.2.12</pagehelper-boot.version>
     </properties>
 
     <dependencyManagement>

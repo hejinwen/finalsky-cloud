@@ -14,10 +14,6 @@
     <packaging>jar</packaging>
     <description>用户服务API</description>
 
-    <properties>
-        <pagehelper.version>5.1.10</pagehelper.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>com.github.pagehelper</groupId>

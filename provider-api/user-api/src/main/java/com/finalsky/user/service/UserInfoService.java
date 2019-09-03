@@ -1,6 +1,6 @@
 package com.finalsky.user.service;
 
-import com.finalsky.user.entity.system.UserInfo;
+import com.finalsky.user.model.UserInfo;
 import com.github.pagehelper.PageInfo;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
