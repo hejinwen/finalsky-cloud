@@ -8,9 +8,16 @@ spring:
   application:
     name: shoppingcart-service
   cloud:
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: 192.168.126.172:8080
     nacos:
       discovery:
         server-addr: 192.168.126.172:8848
       config:
         file-extension: yaml
         server-addr: 192.168.126.172:8848
+feign:
+  sentinel:
+    enabled: true
