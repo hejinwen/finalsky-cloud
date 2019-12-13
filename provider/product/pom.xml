@@ -5,13 +5,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.finalsky</groupId>
-        <artifactId>finalsky-cloud</artifactId>
+        <groupId>com.finalsky.provider</groupId>
+        <artifactId>provider</artifactId>
         <version>1.0</version>
     </parent>
 
-    <artifactId>order</artifactId>
-    <description>订单服务</description>
+    <artifactId>product</artifactId>
+    <packaging>jar</packaging>
+    <name>${project.artifactId}</name>
+    <description>产品服务</description>
 
     <dependencies>
         <dependency>

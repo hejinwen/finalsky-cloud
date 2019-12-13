@@ -12,8 +12,9 @@
 
     <groupId>com.finalsky.provider.api</groupId>
     <artifactId>provider-api</artifactId>
-    <description>服务API</description>
     <packaging>pom</packaging>
+    <name>${project.artifactId}</name>
+    <description>服务API</description>
 
     <modules>
         <module>user-api</module>

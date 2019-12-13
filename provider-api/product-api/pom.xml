@@ -12,6 +12,7 @@
 
   <artifactId>product-api</artifactId>
   <packaging>jar</packaging>
+  <name>${project.artifactId}</name>
   <description>用户服务API</description>
 
   <dependencies>

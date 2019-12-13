@@ -15,22 +15,19 @@
     <artifactId>finalsky-cloud</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
+    <name>${project.artifactId}</name>
     <description>分布式系统架构</description>
 
     <modules>
-        <module>user</module>
-        <module>product</module>
-        <module>inventory</module>
-        <module>shoppingcart</module>
-        <module>order</module>
-        <module>codeGenerator</module>
+        <module>code-generator</module>
+        <module>provider</module>
         <module>provider-api</module>
         <module>rpcserver</module>
     </modules>
 
     <properties>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Greenwich.SR2</spring-cloud.version>
+        <spring-cloud.version>Greenwich.SR4</spring-cloud.version>
         <alibaba-cloud.version>2.1.0.RELEASE</alibaba-cloud.version>
         <springfox-swagger.version>2.9.2</springfox-swagger.version>
         <swagger.version>1.5.22</swagger.version>
@@ -56,5 +53,65 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <testSource>${java.version}</testSource>
+                    <testTarget>${java.version}</testTarget>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <developers>
+        <developer>
+            <name>hejw</name>
+            <email>hejw@rejoysoft.com</email>
+        </developer>
+    </developers>
+
+    <profiles>
+        <profile>
+            <id>deploy</id>
+            <distributionManagement>
+                <repository>
+                    <id>packaging-releases</id>
+                    <name>Packaging Release Repository</name>
+                    <url>http://nexus.rejoysoft.com/repository/maven-releases/</url>
+                </repository>
+                <snapshotRepository>
+                    <id>packaging-snapshots</id>
+                    <name>Packaging Snapshot Repository</name>
+                    <url>http://nexus.rejoysoft.com/repository/maven-snapshots/</url>
+                </snapshotRepository>
+            </distributionManagement>
+
+            <build>
+                <plugins>
+                    <!--配置生成源码包-->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>3.0.1</version>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
 </project>

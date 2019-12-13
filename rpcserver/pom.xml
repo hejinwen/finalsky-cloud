@@ -11,6 +11,8 @@
     </parent>
 
     <artifactId>rpcserver</artifactId>
+    <packaging>jar</packaging>
+    <name>${project.artifactId}</name>
     <description>负载调用测试服务</description>
 
     <dependencies>
