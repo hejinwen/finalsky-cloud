@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-starter-parent</artifactId>
-        <version>Greenwich.SR2</version>
+        <version>Greenwich.SR5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -27,7 +27,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Greenwich.SR4</spring-cloud.version>
+        <spring-cloud.version>Greenwich.SR5</spring-cloud.version>
         <alibaba-cloud.version>2.1.0.RELEASE</alibaba-cloud.version>
         <springfox-swagger.version>2.9.2</springfox-swagger.version>
         <swagger.version>1.5.22</swagger.version>
